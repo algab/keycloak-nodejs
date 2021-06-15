@@ -1,8 +1,8 @@
 {
-  "name": "nodejs-keycloak",
+  "name": "keycloak-nodejs",
   "version": "1.0.0",
   "author": "Álvaro Oliveira",
-  "description": "",
+  "description": "Keycloak NodeJS",
   "scripts": {
     "start": "node build",
     "build": "tsc",
@@ -11,10 +11,12 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "keycloak-connect": "^13.0.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.12",
+    "@types/express-session": "^1.17.3",
     "@types/node": "^15.12.2",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.3.2"
