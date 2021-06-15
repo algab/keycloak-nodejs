@@ -1,10 +1,13 @@
-import { Router } from 'express';
+import { Application, Router } from 'express';
+
 import { UserController } from '../controllers/user.controller';
+import keycloak from '../../config/keycloak';
 
 const router = Router();
 const user = new UserController();
 
-router.get('/', user.user);
-router.get('/manager', user.manager);
+router.get('/public', user.public);
+router.get('/protected', keycloak().protect('protected'), user.protected);
+router.get('/manager', keycloak().protect('manager'), user.manager);
 
-export default (app:any) => app.use('/users', router);
+export default (app:Application) => app.use('/users', router);
