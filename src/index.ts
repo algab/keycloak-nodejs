@@ -1,7 +1,7 @@
 import express from 'express';
 import { config } from 'dotenv';
 
-import routes from './app/routes';
+import routes from './api/routes';
 import keycloak from './config/keycloak';
 
 config();

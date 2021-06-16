@@ -2,3 +2,5 @@
 build
 package-lock.json
 .env
+*.crt
+*.pem
