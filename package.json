@@ -9,6 +9,7 @@
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
@@ -16,6 +17,7 @@
     "keycloak-connect": "^13.0.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.10",
     "@types/express": "^4.17.12",
     "@types/express-session": "^1.17.3",
     "@types/jsonwebtoken": "^8.5.1",

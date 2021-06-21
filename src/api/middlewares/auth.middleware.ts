@@ -15,7 +15,7 @@ export default function verify(role:string) {
   return function(req:Request,res:Response,next:NextFunction) {
     try {
       const { authorization } = req.headers;
-      if (authorization) {           
+      if (authorization) {
         const file = fs.readFileSync(path.join(__dirname, '..', '..', '..', String(process.env.FILE_CERT)));       
         const decode = jwt.verify(authorization.slice(7), file, { algorithms: ['RS256'] });
         const { resource_access } = decode as JWTDecode;
